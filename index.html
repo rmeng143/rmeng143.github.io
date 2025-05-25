@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricky Meng – Mechanical Engineer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+        .project-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .project-description {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.6em;
+        }
+        .media-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .media-container video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .media-container:hover .hover-overlay {
+            display: block;
+        }
+        .caption {
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+            margin-top: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 10px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ricky Meng – Mechanical Engineer</h1>
+</header>
+
+<section>
+    <div class="project-title">Pneumatic Engine Desk Toy</div>
+    <div class="project-description">
+        A compact desk toy powered by a two-cylinder pneumatic engine and driven by human breath, designed to demonstrate key mechanical principles through playful interaction. The engine was CAD-modeled in <strong>PTC Creo</strong> and features a cam-and-follower intake system for air control, driving a fidget-spinner flywheel to simulate smooth rotational energy.
+        <br><br>
+        The project integrates real bearings to reduce friction, fully 3D-printed PLA components, and easily accessible off-the-shelf parts for intuitive assembly. Designed as an educational and novelty item, this toy offers an engaging way to explore engineering concepts through motion.
+    </div>
+
+    <div class="media-container">
+        <video autoplay loop muted>
+            <source src="Mechanism_Animation.mp4" type="video/mp4">
+        </video>
+        <video class="hover-overlay" autoplay loop muted>
+            <source src="spinnerv1animation.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Hover to view earlier iteration</div>
+    </div>
+
+    <div class="media-container">
+        <video controls>
+            <source src="Final_Demonstration.mov" type="video/mp4">
+        </video>
+        <div class="caption">Final demonstration video</div>
+    </div>
+
+    <div class="media-container">
+        <img src="AssemblyScreenshot.png" alt="CAD Render">
+        <div class="caption">PTC Creo CAD Assembly</div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Ricky Meng. Site built with HTML/CSS and mechanical spirit.
+</footer>
+
+</body>
+</html>
