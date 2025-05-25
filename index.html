@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ricky Meng – Mechanical Engineer</title>
+    <title>Ricky Meng – Project Portfolio</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,46 +20,43 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.4em;
+            font-weight: 500;
         }
         .section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
-        .project-description {
-            font-size: 1.1em;
+        .project-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .side-by-side {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
             margin-bottom: 30px;
-            line-height: 1.6;
+        }
+        .side-by-side img,
+        .side-by-side video {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 8px;
         }
         .media-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px;
+            max-width: 800px;
         }
-        .media-container img,
         .media-container video {
             width: 100%;
             border-radius: 8px;
         }
-        .hover-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
-        .media-container:hover .hover-overlay {
-            display: block;
-        }
-        .caption {
-            font-size: 0.9em;
-            text-align: center;
-            color: #555;
-            margin-top: 8px;
+        .project-description {
+            font-size: 1.05em;
+            line-height: 1.6;
         }
         footer {
             text-align: center;
@@ -72,36 +69,27 @@
 <body>
 
 <header>
-    <h1>Ricky Meng – Mechanical Engineer</h1>
+    <h1>Ricky Meng – Project Portfolio</h1>
 </header>
 
 <div class="section">
-    <div class="project-description">
-        A desk-sized mechanical toy featuring a two-cylinder pneumatic engine, designed to be powered by human breath.
-        CAD-modeled and prototyped to demonstrate fundamental principles of air-driven motion, energy transfer, and mechanical timing. 
-        Includes cam-follower actuation, real bearings for smooth operation, and PLA 3D-printed components.
-    </div>
+    <div class="project-title">Pneumatic Engine Desk Toy</div>
 
-    <div class="media-container">
+    <div class="side-by-side">
         <img src="IMG_2174.jpeg" alt="Final prototype image">
-        <video class="hover-overlay" autoplay loop muted>
-            <source src="spinnerv1animation.mp4" type="video/mp4">
-        </video>
-        <div class="caption">Hover to view early prototype animation</div>
-    </div>
-
-    <div class="media-container">
         <video autoplay loop muted>
             <source src="Mechanism_Animation.mp4" type="video/mp4">
         </video>
-        <div class="caption">Final mechanism animation</div>
     </div>
 
     <div class="media-container">
         <video controls>
             <source src="Final_Demonstration.mov" type="video/mp4">
         </video>
-        <div class="caption">Final demonstration video</div>
+    </div>
+
+    <div class="project-description">
+        This desk-sized pneumatic engine toy is powered by human breath and designed for both play and demonstration. It blends novelty and engineering education in one compact form—serving as a fun desktop toy, an educational model for mechanical concepts, or a snap-fit assembly puzzle for hands-on engagement. The engine was fully modeled in PTC Creo and all parts are 3D printed in PLA, with the exception of the bearings, rubber valve balls, and standard fasteners. Each component is designed for tool-free snap-fit assembly with no adhesives required.
     </div>
 </div>
 
