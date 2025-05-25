@@ -7,46 +7,38 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f9;
-            color: #333;
+            background: #f9f9fb;
+            color: #222;
             margin: 0;
             padding: 0;
         }
         header {
-            background: linear-gradient(90deg, #2c3e50, #4ca1af);
+            background: #222;
             color: white;
+            padding: 50px 20px;
             text-align: center;
-            padding: 60px 20px;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        section {
-            padding: 40px 20px;
+        .section {
             max-width: 900px;
-            margin: auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            margin-top: 40px;
-        }
-        .project-title {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         .project-description {
             font-size: 1.1em;
-            margin-bottom: 25px;
-            line-height: 1.6em;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
         .media-container {
             position: relative;
             width: 100%;
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
         }
+        .media-container img,
         .media-container video {
             width: 100%;
             border-radius: 8px;
@@ -65,15 +57,15 @@
         }
         .caption {
             font-size: 0.9em;
-            color: #555;
             text-align: center;
-            margin-top: 5px;
+            color: #555;
+            margin-top: 8px;
         }
         footer {
             text-align: center;
-            padding: 30px 10px;
             font-size: 0.9em;
-            color: #888;
+            color: #aaa;
+            padding: 30px 10px;
         }
     </style>
 </head>
@@ -83,22 +75,26 @@
     <h1>Ricky Meng – Mechanical Engineer</h1>
 </header>
 
-<section>
-    <div class="project-title">Pneumatic Engine Desk Toy</div>
+<div class="section">
     <div class="project-description">
-        A compact desk toy powered by a two-cylinder pneumatic engine and driven by human breath, designed to demonstrate key mechanical principles through playful interaction. The engine was CAD-modeled in <strong>PTC Creo</strong> and features a cam-and-follower intake system for air control, driving a fidget-spinner flywheel to simulate smooth rotational energy.
-        <br><br>
-        The project integrates real bearings to reduce friction, fully 3D-printed PLA components, and easily accessible off-the-shelf parts for intuitive assembly. Designed as an educational and novelty item, this toy offers an engaging way to explore engineering concepts through motion.
+        A desk-sized mechanical toy featuring a two-cylinder pneumatic engine, designed to be powered by human breath.
+        CAD-modeled and prototyped to demonstrate fundamental principles of air-driven motion, energy transfer, and mechanical timing. 
+        Includes cam-follower actuation, real bearings for smooth operation, and PLA 3D-printed components.
+    </div>
+
+    <div class="media-container">
+        <img src="IMG_2174.jpeg" alt="Final prototype image">
+        <video class="hover-overlay" autoplay loop muted>
+            <source src="spinnerv1animation.mp4" type="video/mp4">
+        </video>
+        <div class="caption">Hover to view early prototype animation</div>
     </div>
 
     <div class="media-container">
         <video autoplay loop muted>
             <source src="Mechanism_Animation.mp4" type="video/mp4">
         </video>
-        <video class="hover-overlay" autoplay loop muted>
-            <source src="spinnerv1animation.mp4" type="video/mp4">
-        </video>
-        <div class="caption">Hover to view earlier iteration</div>
+        <div class="caption">Final mechanism animation</div>
     </div>
 
     <div class="media-container">
@@ -107,15 +103,10 @@
         </video>
         <div class="caption">Final demonstration video</div>
     </div>
-
-    <div class="media-container">
-        <img src="AssemblyScreenshot.png" alt="CAD Render">
-        <div class="caption">PTC Creo CAD Assembly</div>
-    </div>
-</section>
+</div>
 
 <footer>
-    &copy; 2025 Ricky Meng. Site built with HTML/CSS and mechanical spirit.
+    &copy; 2025 Ricky Meng. Built with HTML/CSS and curiosity.
 </footer>
 
 </body>
