@@ -12,52 +12,84 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background: #222;
             color: white;
             padding: 50px 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.4em;
             font-weight: 500;
         }
+
         .section {
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
+
         .project-title {
             font-size: 1.6em;
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .side-by-side {
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            flex-wrap: wrap;
             margin-bottom: 30px;
         }
+
         .side-by-side img,
         .side-by-side video {
             width: 100%;
             max-width: 480px;
             border-radius: 8px;
         }
+
         .media-container {
             margin: 0 auto 30px;
             max-width: 800px;
+            text-align: center;
         }
-        .media-container video {
+
+        .media-container video,
+        .media-container img {
             width: 100%;
             border-radius: 8px;
         }
+
         .project-description {
             font-size: 1.05em;
             line-height: 1.6;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
+
+        .video-box {
+            max-width: 420px;
+            flex-shrink: 0;
+        }
+
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 480px;
+        }
+
+        .image-stack img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
         footer {
             text-align: center;
             font-size: 0.9em;
@@ -75,7 +107,7 @@
 <div class="section">
     <div class="project-title">Pneumatic Engine Desk Toy</div>
     <div class="side-by-side">
-        <img src="IMG_2174.jpeg" alt="Final prototype image">
+        <img src="Final_prototype_image.jpeg" alt="Final prototype image">
         <video autoplay loop muted>
             <source src="Mechanism_Animation.mp4" type="video/mp4">
         </video>
@@ -86,20 +118,33 @@
         </video>
     </div>
     <div class="project-description">
-        I made this one mostly as a novelty item that I could use as a gift, but it has some potential to be an educational toy. You can spin it by blowing into the top or flicking the flywheel. I designed the parts in PTC Creo to try something new and 3D printed everything except the bearings, rubber valve balls and bolts. All components slide or snap together so I could assemble a bunch of these consistently.
+        I made this one mostly as a novelty item that I could use as a gift, but it has some potential to be an educational toy.
+        You can spin it by blowing into the top or flicking the flywheel. I designed the parts in PTC Creo to try something new
+        and 3D printed everything except the bearings, rubber valve balls and bolts. All components slide or snap together so I
+        could assemble a bunch of these consistently.
     </div>
 </div>
 
 <div class="section">
     <div class="project-title">Rotary Inverted Pendulum Control</div>
     <div class="side-by-side">
-        <img src="RIPBlockDiagram.png" alt="Block diagram">
-        <video controls>
-            <source src="RIP_Demo.MP4" type="video/mp4">
-        </video>
+        <div class="video-box">
+            <video controls>
+                <source src="RIP_Demo.MP4" type="video/mp4">
+            </video>
+        </div>
+        <div class="image-stack">
+            <img src="Response_Plot.png" alt="Performance results plot">
+            <img src="RIPBlockDiagram.png" alt="Block diagram">
+        </div>
     </div>
     <div class="project-description">
-        I designed and tuned a two-loop feedback controller to stabilize this rotary inverted pendulum. The system consists of a vertical rod mounted to a pivot with an encoder, all attached to a servo-driven table. A sixth-order outer loop controller stabilizes the rod while a third-order inner loop manages the faster table dynamics. The control functions were developed using Lagrangian mechanics to model the system, followed by linearization and parameter identification through experimental data and least squares estimation. The final controller was able to track a timed trajectory, moving the table 90 degrees in 7.5 seconds while maintaining a tracking error within 3 degrees.
+        I designed and tuned a two-loop feedback controller to stabilize this rotary inverted pendulum. The system consists of a
+        vertical rod mounted to a pivot with an encoder, all attached to a servo-driven table. A sixth-order outer loop controller
+        stabilizes the rod while a third-order inner loop manages the faster table dynamics. The control functions were developed
+        using Lagrangian mechanics to model the system, followed by linearization and parameter identification through
+        experimental data and least squares estimation. The final controller was able to track a timed trajectory, moving the
+        table 90 degrees in 7.5 seconds while maintaining a tracking error within 3 degrees.
     </div>
 </div>
 
