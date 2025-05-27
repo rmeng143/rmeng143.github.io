@@ -5,9 +5,25 @@
     <meta charset="UTF-8">
     <title>Ricky Meng – Recent Projects</title>
     <style>
+        /* Responsive typography */
+        html {
+            font-size: clamp(14px, 1.5vw, 18px);
+        }
+
+        /* Mobile responsiveness for flex layout */
+        @media (max-width: 768px) {
+            .side-by-side {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        
+        .section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
         body {
-            min-height: 100vh;
-            overflow-y: auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f9f9fb;
             color: #222;
@@ -41,8 +57,6 @@
         }
 
         .side-by-side {
-            flex-wrap: wrap;
-            min-width: 0;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -70,8 +84,6 @@
         }
 
         .project-description {
-            flex-basis: 100%;
-            min-width: 0;
             font-size: 1.05em;
             line-height: 1.6;
             word-wrap: break-word;
@@ -204,9 +216,10 @@
         This project was built for a small undergraduate competition where the RC car had to navigate a circuit with ramps and obstacles. I designed and built the vehicle using a 3D-printed PLA chassis and programmed it in the Arduino IDE. It’s powered by two geared DC motors and controlled via Wi-Fi using the Blynk IoT platform on a smartphone. The ESP32 microcontroller receives commands from the app and sends signals through an L298N motor driver to control direction and speed. The car won the competition with the fastest time on the course, completing all sections including the ramp.
     </div>
 </div>
-
 <footer>
-    &copy; 2025 Ricky Meng. Built with HTML/CSS and curiosity.
+    <p>Feel free to reach me at: <strong>mengricky2013@gmail.com</strong></p>
+    <p>&copy; 2025 Ricky Meng. Built with HTML/CSS.</p>
 </footer>
+
 </body>
 </html>
