@@ -6,6 +6,8 @@
     <title>Ricky Meng – Recent Projects</title>
     <style>
         body {
+            min-height: 100vh;
+            overflow-y: auto;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f9f9fb;
             color: #222;
@@ -39,6 +41,8 @@
         }
 
         .side-by-side {
+            flex-wrap: wrap;
+            min-width: 0;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -66,6 +70,8 @@
         }
 
         .project-description {
+            flex-basis: 100%;
+            min-width: 0;
             font-size: 1.05em;
             line-height: 1.6;
             word-wrap: break-word;
@@ -74,6 +80,11 @@
 
         .video-box {
             max-width: 420px;
+            flex-shrink: 0;
+        }
+
+        .small-video-box {
+            max-width: 320px;
             flex-shrink: 0;
         }
 
@@ -172,9 +183,30 @@
     </div>
 </div>
 
+
+<!-- Project 4: Blynk IoT RC Car -->
+<div class="section">
+    <div class="project-title">Blynk IoT RC Car</div>
+    <div class="side-by-side">
+        <div class="small-video-box">
+            <video controls>
+                <source src="RC_car_demo.mov" type="video/mp4">
+            </video>
+        </div>
+        <div class="image-stack">
+            <img src="RC_car_track.png" alt="Competition track photo">
+            <img src="RC_car_CAD.png" alt="CAD model of RC car">
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="project-description">
+        This project was built for a small undergraduate competition where the RC car had to navigate a circuit with ramps and obstacles. I designed and built the vehicle using a 3D-printed PLA chassis and programmed it in the Arduino IDE. It’s powered by two geared DC motors and controlled via Wi-Fi using the Blynk IoT platform on a smartphone. The ESP32 microcontroller receives commands from the app and sends signals through an L298N motor driver to control direction and speed. The car won the competition with the fastest time on the course, completing all sections including the ramp.
+    </div>
+</div>
+
 <footer>
     &copy; 2025 Ricky Meng. Built with HTML/CSS and curiosity.
 </footer>
-
 </body>
 </html>
